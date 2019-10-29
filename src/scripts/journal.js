@@ -20,8 +20,12 @@ document.getElementById("record").addEventListener("click", function () {
     let entryValue = document.getElementById("entry-input").value
     console.log(conceptValue)
     console.log(entryValue)
+    const regex=/[^A-Za-z0-9;:{}()\s]+/g
+    if (conceptValue.match(regex)){
+        window.alert("CONTAINS FORBIDDEN CHAR")
+    }
 })
 
-   
+
 
 

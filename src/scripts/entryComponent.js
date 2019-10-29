@@ -12,3 +12,6 @@ const entryManager = {
     `
   }
 }
+
+
+export default entryManager

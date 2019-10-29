@@ -20,11 +20,11 @@
         </fieldset>
         <fieldset>
             <label for="concept-input">Concepts covered</label>
-            <input type="text" name="concept-input">
+            <input type="text" name="concept-input" id="concept-input">
         </fieldset>
         <fieldset>
-            <label for="entry-input">Journal entry</label>
-            <textarea name="entry-input"></textarea>
+            <label for="entry-input" >Journal entry</label>
+            <textarea name="entry-input" id="entry-input"></textarea>
         </fieldset>
         <fieldset>
             <label for="mood-input">Mood</label>
@@ -34,16 +34,13 @@
                 <option value="Ok">Ok</option>
             </select>
         </fieldset>
-        <button>Record Journal Entry</button>
+        <button id="record">Record Journal Entry</button>
     </form>
 
     <article class="entryLog">
 
     </article>
 
-    <!-- <script src="./scripts/data.js"></script> -->
-    <!-- <script src="./scripts/entryComponent.js"></script>
-    <script src="./scripts/entriesDOM.js"></script> -->
     <script type="module" src="./scripts/journal.js"></script></body>
 
 </html>

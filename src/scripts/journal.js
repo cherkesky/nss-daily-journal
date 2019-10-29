@@ -10,7 +10,18 @@ import API from "./data.js"
 import renderDom from "./entriesDOM.js"
 
 
+
 API.getJournalEntries()
 .then(response => renderDom.renderJournalEntries(response))
+
+
+document.getElementById("record").addEventListener("click", function () {
+    let conceptValue = document.getElementById("concept-input").value
+    let entryValue = document.getElementById("entry-input").value
+    console.log(conceptValue)
+    console.log(entryValue)
+})
+
+   
 
 

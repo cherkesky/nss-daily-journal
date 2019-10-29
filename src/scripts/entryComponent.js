@@ -8,6 +8,7 @@ const entryManager = {
         <p>${journalEntry.entry}</p>
         <p>${journalEntry.mood}</p>
         <p>${journalEntry.date}</p>
+        <hr>
       </section>
     `
   }

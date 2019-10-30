@@ -5,15 +5,16 @@ const API = {
           
   },
 
- entriesFactory(entries) {    /////// <---------------------------- CHECK THIS LATER
+  entriesFactory (date, concept, entry, mood) {    
   return {
-    id: entries.id,
-    date: entries.date,
-    concept: entries.concept,
-    entry: entries.entry,
-    mood: entries.mood
+    date: date,
+    concept: concept,
+    entry: entry,
+    mood: mood
   }
  }
 }
 
 export default API
+
+

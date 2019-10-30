@@ -18,23 +18,23 @@
     <form class="form-group flex-nowrap jumbotron">
         <fieldset>
             <label for="date-input">Date of entry</label>
-            <input type="date" name="date-input" id="date-input" class="form-control">
+            <input type="date" name="date-input" id="date-input" class="form-control" required>
         </fieldset>
         <br>
 
         <fieldset>
             <label for="concept-input">Concepts covered</label>
-            <input type="text" name="concept-input" id="concept-input" class="form-control">
+            <input type="text" name="concept-input" id="concept-input" class="form-control" required>
         </fieldset>
         <br>
         <fieldset>
             <label for="entry-input">Journal entry</label>
-            <textarea name="entry-input" id="entry-input" class="form-control"></textarea>
+            <textarea name="entry-input" id="entry-input" class="form-control" required></textarea>
         </fieldset>
         <br>
-        <fieldset class="dropdown form-group">
+        <fieldset class="dropdown form-group" >
             <label for="mood-input">Mood</label>
-            <select class="mood" name="mood-input" id="mood-input" class="form-control dropdown-menu">
+            <select class="mood" name="mood-input" id="mood-input" class="form-control dropdown-menu required" required>
                 <option value="Amazing" class="dropdown-item">Amazing</option>
                 <option value="Great" class="dropdown-item">Great</option>
                 <option value="Ok" class="dropdown-item">Ok</option>

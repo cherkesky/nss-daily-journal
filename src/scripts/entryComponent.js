@@ -11,7 +11,17 @@ const entryManager = {
         <hr>
       </section>
     `
-  }
+  },
+
+
+  entriesFactory (date, concept, entry, mood) {    
+    return {
+      date: date,
+      concept: concept,
+      entry: entry,
+      mood: mood
+    }
+   }
 }
 
 

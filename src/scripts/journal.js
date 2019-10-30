@@ -8,12 +8,12 @@
 
 import API from "./data.js"
 import renderDom from "./entriesDOM.js"
+import entryManager from "./entryComponent.js"
 
 
 
 API.getJournalEntries()
     .then(response => renderDom.renderJournalEntries(response))
-//.then (console.log(API.entriesFactory(entries))) /////// <---------------------------- CHECK THIS LATER
 
 
 
@@ -28,8 +28,10 @@ document.getElementById("record").addEventListener("click", function () {
         window.alert("CONTAINS FORBIDDEN CHARACTERS")
     } else {
         console.log (dateValue, conceptValue, entryValue, moodValue)
-        let returnedObject = API.entriesFactory(dateValue, conceptValue, entryValue, moodValue)
-        console.log(returnedObject)
+        let journalFactoryObject = entryManager.entriesFactory(dateValue, conceptValue, entryValue, moodValue)
+        console.log(journalFactoryObject)
+        API.postJournalEntries(journalFactoryObject)
+
     }
     event.preventDefault();
 })

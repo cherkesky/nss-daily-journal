@@ -15,8 +15,6 @@ import entryManager from "./entryComponent.js"
 API.getJournalEntries()
     .then(response => renderDom.renderJournalEntries(response))
 
-
-
 document.getElementById("record").addEventListener("click", function () {
     let dateValue = document.getElementById("date-input").value
     let conceptValue = document.getElementById("concept-input").value

@@ -13,7 +13,6 @@ import formManager from "./formManager.js"
 
 document.getElementById("form-container").innerHTML = formManager.renderMainForm()
 
-
 API.getJournalEntries()
     .then(response => renderDom.renderJournalEntries(response))
 
@@ -24,10 +23,10 @@ document.getElementById("record").addEventListener("click", function () {
     let moodValue = document.getElementById("mood-input").value
 
     const regex = /[^A-Za-z0-9;:{entryValue}()\s]+/g
-    if (conceptValue.match(regex) || entryValue.match(regex)|| dateValue==="" || entryValue==="" || conceptValue ==="" ) {
+    if (conceptValue.match(regex) || entryValue.match(regex) || dateValue === "" || entryValue === "" || conceptValue === "") {
         window.alert("PLEASE REVIEW THE ENTERED INFO")
     } else {
-        console.log (dateValue, conceptValue, entryValue, moodValue)
+        console.log(dateValue, conceptValue, entryValue, moodValue)
         let journalFactoryObject = entryManager.entriesFactory(dateValue, conceptValue, entryValue, moodValue)
         console.log(journalFactoryObject)
         API.postJournalEntries(journalFactoryObject)
@@ -37,4 +36,4 @@ document.getElementById("record").addEventListener("click", function () {
 })
 
 
-    renderDom.filterResponses()
+renderDom.filterResponses()

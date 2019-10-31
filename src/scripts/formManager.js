@@ -62,8 +62,12 @@ const formManager = {
     <hr>
     
     `
-  }
+  },
 
+  renderEditForm(){
+
+    // enter code here
+  }
 }
 
 

@@ -26,23 +26,23 @@ const renderDom = {
     document.getElementById("amazing").addEventListener("click", function () {
       API.getJournalEntries()
         .then(jsonfiedResponse => {
-          filteredMoodArray= jsonfiedResponse.filter(mood => mood.mood === "Amazing")
+          filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Amazing")
           console.log(filteredMoodArray)
           renderDom.renderJournalEntries(filteredMoodArray)
         })
     })
     document.getElementById("great").addEventListener("click", function () {
       API.getJournalEntries()
-      .then(jsonfiedResponse => {
-        filteredMoodArray= jsonfiedResponse.filter(mood => mood.mood === "Great")
-        console.log(filteredMoodArray)
-        renderDom.renderJournalEntries(filteredMoodArray)
-      })
+        .then(jsonfiedResponse => {
+          filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Great")
+          console.log(filteredMoodArray)
+          renderDom.renderJournalEntries(filteredMoodArray)
+        })
     })
     document.getElementById("ok").addEventListener("click", function () {
       API.getJournalEntries()
         .then(jsonfiedResponse => {
-          filteredMoodArray= jsonfiedResponse.filter(mood => mood.mood === "Ok")
+          filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Ok")
           console.log(filteredMoodArray)
           renderDom.renderJournalEntries(filteredMoodArray)
         })
@@ -50,11 +50,11 @@ const renderDom = {
     document.getElementById("can-be-better").addEventListener("click", function () {
       API.getJournalEntries()
         .then(jsonfiedResponse => {
-          filteredMoodArray= jsonfiedResponse.filter(mood => mood.mood === "Can be better")
+          filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Can be better")
           console.log(filteredMoodArray)
           renderDom.renderJournalEntries(filteredMoodArray)
         })
-     })
+    })
 
   }
 }

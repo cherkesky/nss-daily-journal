@@ -42,53 +42,40 @@
                 <option value="Ok" class="dropdown-item">Ok</option>
                 <option value="Can be better" class="dropdown-item">Can be better</option>
             </select> <br><br>
-        <br>
-        <button id="record" class="btn btn-danger btn-lg">Record Journal Entry</button>
-        <br><br>
+            <br>
+            <button id="record" class="btn btn-danger btn-lg">Record Journal Entry</button>
+            <br><br>
     </form>
-<hr>
+    <hr>
     <form>
-            <div>
-                <fieldset id="radio-buttons">
-                    <legend>Filter responses by mood:</legend>
-                    <div>
-                        <input type="radio" name="mood-filter" id="amazing" value="amazing">
-                        <label for="amazing">Amazing </label>
-                    </div>
-                    <div> <input type="radio" name="mood-filter" id="great" value="great">
-                        <label for="great">Great </label>
-                    </div>
-                    <div>
-                        <input type="radio" name="mood-filter" id="ok" value="ok">
-                        <label for="ok">Ok </label>
-                    </div>
-                    <div>
-                        <input type="radio" name="mood-filter" id="can-be-better" value="can-be-better">
-                        <label for="can be better">Can be better </label>
-                    </div>
-                </fieldset>
-            </div>
-        </form>
-<hr>
+        <div>
+            <fieldset id="radio-buttons">
+                <legend>Filter responses by mood:</legend>
+                <div>
+                    <input type="radio" name="mood-filter" id="amazing" value="amazing">
+                    <label for="amazing">Amazing </label>
+                </div>
+                <div> <input type="radio" name="mood-filter" id="great" value="great">
+                    <label for="great">Great </label>
+                </div>
+                <div>
+                    <input type="radio" name="mood-filter" id="ok" value="ok">
+                    <label for="ok">Ok </label>
+                </div>
+                <div>
+                    <input type="radio" name="mood-filter" id="can-be-better" value="can-be-better">
+                    <label for="can be better">Can be better </label>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <hr>
 
-    <article class="entryLog container jumbotron">
+    <article class="entryLog container">
 
     </article>
 
-</body>
-
-
-
-<script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script type="module" src="./scripts/journal.js"></script>
+    <script type="module" src="./scripts/journal.js"></script>
 </body>
 
 </html>

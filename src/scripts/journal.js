@@ -9,7 +9,9 @@
 import API from "./data.js"
 import renderDom from "./entriesDOM.js"
 import entryManager from "./entryComponent.js"
+import formManager from "./formManager.js"
 
+document.getElementById("form-container").innerHTML = formManager.renderMainForm()
 
 
 API.getJournalEntries()

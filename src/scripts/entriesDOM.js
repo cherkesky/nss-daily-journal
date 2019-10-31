@@ -54,7 +54,7 @@ const renderDom = {
           console.log(filteredMoodArray)
           renderDom.renderJournalEntries(filteredMoodArray)
         })
-    })
+     })
 
   }
 }

@@ -16,6 +16,22 @@ const renderDom = {
     })
     const logArticle = document.querySelector(".entryLog")
     logArticle.innerHTML = HtmlForAllEntries
+  },
+
+  filterResponses(){
+    document.getElementById("amazing").addEventListener("click", function (){
+      console.log ("Amazing", event.target.value)
+    })
+    document.getElementById("amazing").addEventListener("click", function (){
+      console.log ("Amazing", event.target.value)
+    })
+     document.getElementById("amazing").addEventListener("click", function (){
+      console.log ("Amazing", event.target.value)
+    })
+    document.getElementById("amazing").addEventListener("click", function (){
+      console.log ("Amazing", event.target.value)
+    })
+
   }
 }
 

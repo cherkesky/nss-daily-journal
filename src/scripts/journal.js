@@ -35,4 +35,4 @@ document.getElementById("record").addEventListener("click", function () {
 })
 
 
-
+    renderDom.filterResponses()

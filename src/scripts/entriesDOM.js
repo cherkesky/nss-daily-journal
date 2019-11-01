@@ -1,14 +1,13 @@
-/*
-    Purpose: To render all journal entries to the DOM
-
-    Arguments: entries (array of objects)
-*/
 
 
 import entryManager from "./entryComponent.js"
 
+//*********************************************************************************************** 
+// Display the journal elements on the DOM
+//*********************************************************************************************** 
 const renderDom = {
   renderJournalEntries(entries) {
+    console.log(entries)
     let HtmlForAllEntries = ""
     entries.forEach(entry => {
       const entryHtml = entryManager.makeJournalEntryComponent(entry)

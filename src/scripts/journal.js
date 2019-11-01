@@ -11,6 +11,10 @@ document.getElementById("form-container").innerHTML = formManager.renderMainForm
 API.getJournalEntries()
     .then(response => renderDom.renderJournalEntries(response)) // displaying all entries
 
-eventManager.recordNewEntry()
-renderDom.filterResponses()
-renderDom.deleteResponse()
+
+//*********************************************************************************************** 
+//  Calling the event handlers
+//*********************************************************************************************** 
+eventManager.recordNewEntry() // looking for new submissions
+eventManager.deleteAnEntry() // looking for a deletion request
+eventManager.filterResponses() // looking for a filtering request

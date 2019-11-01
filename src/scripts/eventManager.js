@@ -36,9 +36,17 @@ const eventManager = {
   //  Event listener to the DELETE button
   //*********************************************************************************************** 
   deleteAnEntry() {
-    document.getElementById("record").addEventListener("click", function () { }) /// <----- Insert code here
-
-  },
+    document.querySelector(".entryLog").addEventListener("click", function (e) {     
+    console.log(e.target.id)
+    if (event.target.id.startsWith("delete-button")) {
+      const entryToDelete = event.target.id.split("--")[1]
+      console.log (`Please delete entry number!  ${entryToDelete}`) 
+      API.deleteJournalEntry(entryToDelete)
+        // .then(response => response.json())
+        // .then(console.log(jsonfiedResponse))
+     }
+    })
+},
 //*********************************************************************************************** 
 // Filter responses by mood
 //*********************************************************************************************** 

@@ -23,13 +23,12 @@ const API = {
 //  Delete an entry
 //*********************************************************************************************** 
     deleteJournalEntry (entryId) {
-        fetch(`http://localhost:3000/${entryId}`), { 
+        fetch(`http://localhost:3000/entries/${entryId}`, { 
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newJournalEntry)
-}
+            }
+})
 }}  
 
 

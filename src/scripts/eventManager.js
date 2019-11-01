@@ -1,6 +1,7 @@
 import entryManager from "./entryComponent.js"
 import renderDom from "./entriesDOM.js"
 import API from "./data.js"
+import formManager from "./formManager.js"
 
 let filteredMoodArray = [] // making sure that the filtered mood array is fresh and empty
 
@@ -42,11 +43,27 @@ const eventManager = {
       const entryToDelete = event.target.id.split("--")[1]
       console.log (`Please delete entry number!  ${entryToDelete}`) 
       API.deleteJournalEntry(entryToDelete)
-        // .then(response => response.json())
-        // .then(console.log(jsonfiedResponse))
      }
     })
 },
+
+//*********************************************************************************************** 
+  //  Event listener to the EDIT button
+  //*********************************************************************************************** 
+  editAnEntry() {
+    document.querySelector(".entryLog").addEventListener("click", function (e) {     
+    console.log(e.target.id)
+    if (event.target.id.startsWith("edit-button")) {
+      const entryToDelete = event.target.id.split("--")[1]
+      console.log (`Please edit entry number!  ${entryToDelete}`) 
+      API.getJournalEntry(entryToDelete)
+        .then(jsonfiedResponse => console.log(jsonfiedResponse))
+        .then  (window.open(`http://127.0.0.1:5500/src/editMode.html`, 'Daily Journal Edit',"width=800,height=400"));
+              
+     }
+    })
+  },
+
 //*********************************************************************************************** 
 // Filter responses by mood
 //*********************************************************************************************** 

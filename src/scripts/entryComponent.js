@@ -12,7 +12,10 @@ const entryManager = {
         <p class="card-text">Date: ${journalEntry.date}</p>
 
         
-        <button type="button" class="btn btn-lg btn-light">    <i class="far fa-edit">   </i> </button>
+        <button type="button" id="edit-button" class="btn btn-lg btn-light"><i class="far fa-edit"></i> </button>
+        <button type="button" id="delete-button" class="btn btn-lg btn-light"><i class="far fa-trash-alt"> </i> </button>
+
+
         </div>
         <hr>
       </section>

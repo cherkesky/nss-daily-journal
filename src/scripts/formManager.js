@@ -43,6 +43,10 @@ const formManager = {
             <fieldset id="mood-fields" class="form-row">
                 <legend>Filter responses by mood:</legend>
                 <div>
+                    <input type="radio" name="mood-filter" id="all" value="all" checked="checked">
+                    <label for="all">All </label>
+                </div>
+                <div>
                     <input type="radio" name="mood-filter" id="amazing" value="amazing">
                     <label for="amazing">Amazing </label>
                 </div>

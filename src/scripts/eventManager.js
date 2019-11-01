@@ -69,10 +69,10 @@ const eventManager = {
             console.log(conceptForEdit, responseForEdit, moodForEdit, dateForEdit)
 
 
-          // document.getElementById("edit-date-input").value = dateForEdit
-          document.getElementById("edit-concept-input").value = conceptForEdit
-          document.getElementById("edit-entry-input").value = responseForEdit
-          document.getElementById("edit-mood-input").value = moodForEdit
+          this.document.getElementById("edit-date-input").value = dateForEdit
+          this.document.getElementById("edit-concept-input").value = conceptForEdit
+          this.document.getElementById("edit-entry-input").value = responseForEdit
+          this.document.getElementById("edit-mood-input").value = moodForEdit
         })
               
      }

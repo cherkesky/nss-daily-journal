@@ -34,6 +34,27 @@
       "entry": "Learning about the POST concept with Steve Brownly",
       "mood": "Can be better",
       "id": 5
+    },
+    {
+      "date": "2019-10-30",
+      "concept": "POST fetch 2",
+      "entry": "Learning about the POST concept with Steve Brownly",
+      "mood": "Can be better",
+      "id": 6
+    },
+    {
+      "date": "2019-10-30",
+      "concept": "POST fetch 3",
+      "entry": "Learning about the POST concept with Steve Brownly",
+      "mood": "Can be better",
+      "id": 7
+    },
+    {
+      "date": "2019-10-30",
+      "concept": "POST fetch 4",
+      "entry": "Learning about the POST concept with Steve Brownly",
+      "mood": "Can be better",
+      "id": 8
     }
   ]
 }

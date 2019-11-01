@@ -1,7 +1,7 @@
 const entryManager = {
 
   makeJournalEntryComponent(journalEntry) {
-    // Create your own HTML structure for a journal entry
+    // Creating HTML structure for a journal entry
     return `
       <section class="card">
         <h3 class="card-header">${journalEntry.concept}</h3>
@@ -12,8 +12,8 @@ const entryManager = {
         <p class="card-text">Date: ${journalEntry.date}</p>
 
         
-        <button type="button" id="edit-button" class="btn btn-lg btn-light"><i class="far fa-edit"></i> </button>
-        <button type="button" id="delete-button" class="btn btn-lg btn-light"><i class="far fa-trash-alt"> </i> </button>
+        <button type="button" id="edit-button--${journalEntry.id}" class="btn btn-lg btn-light"><i class="far fa-edit"></i> </button>
+        <button type="button" id="delete-button--${journalEntry.id}" class="btn btn-lg btn-light"><i class="far fa-trash-alt"> </i> </button>
 
 
         </div>

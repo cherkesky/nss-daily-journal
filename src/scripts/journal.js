@@ -10,7 +10,7 @@ document.getElementById("form-container").innerHTML = formManager.renderMainForm
 
 API.getJournalEntries()
     .then(response => renderDom.renderJournalEntries(response)) // displaying all entries
-
+    
 
 //*********************************************************************************************** 
 //  Calling the event handlers

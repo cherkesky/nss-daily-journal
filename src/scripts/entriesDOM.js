@@ -3,7 +3,7 @@
 import entryManager from "./entryComponent.js"
 
 //*********************************************************************************************** 
-// Display the journal elements on the DOM
+// Display the journal entries on the DOM
 //*********************************************************************************************** 
 const renderDom = {
   renderJournalEntries(entries) {

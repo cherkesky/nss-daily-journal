@@ -78,7 +78,7 @@ const formManager = {
     console.log("EDIT FORM CALLED")
     return `
     <br>
-    <h1 class=" display-4 text-center ">Daily Journal Edit</h1>
+    <h1 class=" display-4 text-center ">Edit Mode</h1>
     <br>
     <form class="form-group flex-nowrap jumbotron">
         <fieldset>

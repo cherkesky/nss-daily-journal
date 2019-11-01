@@ -1,7 +1,7 @@
 import entryManager from "./entryComponent.js"
 import renderDom from "./entriesDOM.js"
 import API from "./data.js"
-import formManager from "./formManager.js"
+//import formManager from "./formManager.js"
 
 let filteredMoodArray = [] // making sure that the filtered mood array is fresh and empty
 
@@ -43,7 +43,8 @@ const eventManager = {
       const entryToDelete = event.target.id.split("--")[1]
       console.log (`Please delete entry number!  ${entryToDelete}`) 
       API.deleteJournalEntry(entryToDelete)
-     }
+      API.getJournalEntries()  
+      }
     })
 },
 
@@ -56,9 +57,23 @@ const eventManager = {
     if (event.target.id.startsWith("edit-button")) {
       const entryToDelete = event.target.id.split("--")[1]
       console.log (`Please edit entry number!  ${entryToDelete}`) 
+      window.open(`http://127.0.0.1:8080/src/editMode.html`, 'Daily Journal Edit',"width=800,height=400")
       API.getJournalEntry(entryToDelete)
-        .then(jsonfiedResponse => console.log(jsonfiedResponse))
-        .then  (window.open(`http://127.0.0.1:5500/src/editMode.html`, 'Daily Journal Edit',"width=800,height=400"));
+        .then(jsonfiedResponse => 
+          {
+          let conceptForEdit=jsonfiedResponse.concept
+          let responseForEdit=jsonfiedResponse.entry
+          let moodForEdit=jsonfiedResponse.mood
+          let dateForEdit=jsonfiedResponse.date
+
+            console.log(conceptForEdit, responseForEdit, moodForEdit, dateForEdit)
+
+
+          // document.getElementById("edit-date-input").value = dateForEdit
+          document.getElementById("edit-concept-input").value = conceptForEdit
+          document.getElementById("edit-entry-input").value = responseForEdit
+          document.getElementById("edit-mood-input").value = moodForEdit
+        })
               
      }
     })

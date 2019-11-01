@@ -3,14 +3,10 @@ import renderDom from "./entriesDOM.js"
 import formManager from "./formManager.js"
 import eventManager from "./eventManager.js"
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//                                                                                     Main mode
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 
 //*********************************************************************************************** 
 //  Painting the initial UIs
 //*********************************************************************************************** 
-if (window.name==="") {
     document.getElementById("main-form-container").innerHTML = formManager.renderMainForm()
     document.getElementById("main-form-container").innerHTML = formManager.renderMainForm()
 
@@ -25,14 +21,6 @@ eventManager.editAnEntry() // looking for an edition request
 eventManager.filterResponses() // looking for a filtering request
 
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//                                                                                     Edit mode
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 
-} else if (window.name==="Daily Journal Edit") {
-    console.log ("IM IN EDIT MODE. DO SOMETHING!")
-    document.getElementById("edit-form-container").innerHTML = formManager.renderEditForm()
-
-}
 
 

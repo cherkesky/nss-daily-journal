@@ -1,7 +1,7 @@
 import entryManager from "./entryComponent.js"
 import renderDom from "./entriesDOM.js"
 import API from "./data.js"
-//import formManager from "./formManager.js"
+import formManager from "./formManager.js"
 
 let filteredMoodArray = [] // making sure that the filtered mood array is fresh and empty
 
@@ -55,10 +55,15 @@ const eventManager = {
     document.querySelector(".entryLog").addEventListener("click", function (e) {     
     console.log(e.target.id)
     if (event.target.id.startsWith("edit-button")) {
-      const entryToDelete = event.target.id.split("--")[1]
-      console.log (`Please edit entry number!  ${entryToDelete}`) 
-      window.open(`http://127.0.0.1:8080/src/editMode.html`, 'Daily Journal Edit',"width=800,height=400")
-      API.getJournalEntry(entryToDelete)
+      const entryToEdit = event.target.id.split("--")[1]
+      console.log (`Please edit entry number!  ${entryToEdit}`) 
+
+      let mainFormContainer = document.getElementById("main-form-container")
+      let entryLogContainer = document.querySelector(".entryLog")
+      mainFormContainer.innerHTML = formManager.renderEditForm() // <----- replacing the main form with edit 
+      entryLogContainer.innerHTML = ""
+
+      API.getJournalEntry(entryToEdit)
         .then(jsonfiedResponse => 
           {
           let conceptForEdit=jsonfiedResponse.concept
@@ -66,10 +71,9 @@ const eventManager = {
           let moodForEdit=jsonfiedResponse.mood
           let dateForEdit=jsonfiedResponse.date
 
-            console.log(conceptForEdit, responseForEdit, moodForEdit, dateForEdit)
+          console.log(conceptForEdit, responseForEdit, moodForEdit, dateForEdit)
 
-
-          // document.getElementById("edit-date-input").value = dateForEdit
+          document.getElementById("edit-date-input").value = dateForEdit
           document.getElementById("edit-concept-input").value = conceptForEdit
           document.getElementById("edit-entry-input").value = responseForEdit
           document.getElementById("edit-mood-input").value = moodForEdit

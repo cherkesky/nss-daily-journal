@@ -57,7 +57,7 @@ const eventManager = {
     if (event.target.id.startsWith("edit-button")) {
       const entryToDelete = event.target.id.split("--")[1]
       console.log (`Please edit entry number!  ${entryToDelete}`) 
-      window.open(`http://127.0.0.1:8080/src/editMode.html`, 'Daily Journal Edit',"width=800,height=400")
+      let editWindow = window.open(`http://127.0.0.1:8080/src/editMode.html`, 'Daily Journal Edit',"width=800,height=400")
       API.getJournalEntry(entryToDelete)
         .then(jsonfiedResponse => 
           {
@@ -67,12 +67,13 @@ const eventManager = {
           let dateForEdit=jsonfiedResponse.date
 
             console.log(conceptForEdit, responseForEdit, moodForEdit, dateForEdit)
+          
+            // let editContainer = editWindow.document.getElementById("edit-form-container")
 
-
-          this.document.getElementById("edit-date-input").value = dateForEdit
-          this.document.getElementById("edit-concept-input").value = conceptForEdit
-          this.document.getElementById("edit-entry-input").value = responseForEdit
-          this.document.getElementById("edit-mood-input").value = moodForEdit
+          editWindow.document.getElementById("edit-date-input").value = dateForEdit
+          editWindow.document.getElementById("edit-concept-input").value = conceptForEdit
+          editWindow.document.getElementById("edit-entry-input").value = responseForEdit
+          editWindow.document.getElementById("edit-mood-input").value = moodForEdit
         })
               
      }

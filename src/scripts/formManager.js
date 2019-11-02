@@ -1,9 +1,9 @@
 
 
 const formManager = {
-//*********************************************************************************************** 
-//  Creating the MAIN form
-//*********************************************************************************************** 
+  //*********************************************************************************************** 
+  //  Creating the MAIN form
+  //*********************************************************************************************** 
   renderMainForm() {
     return `
     <br>
@@ -37,7 +37,7 @@ const formManager = {
                 <option value="Can be better" class="dropdown-item">Can be better</option>
             </select> <br><br>
             <br>
-            <button id="record" class="btn btn-danger btn-lg">Record Journal Entry</button>
+            <button id="record" class="btn btn-primary btn-lg">Record Journal Entry</button>
             <br><br>
         </fieldset>
     </form>
@@ -70,12 +70,50 @@ const formManager = {
     
     `
   },
-//*********************************************************************************************** 
-//  Creating the EDIT form
-//*********************************************************************************************** 
-  renderEditForm(){
+  //*********************************************************************************************** 
+  //  Creating the EDIT form
+  //*********************************************************************************************** 
+  renderEditForm() {
 
-    // enter code here
+    console.log("EDIT FORM CALLED")
+    return `
+    <br>
+    <h1 class=" display-4 text-center ">Edit Mode</h1>
+    <br>
+    <form class="form-group flex-nowrap jumbotron">
+        <fieldset>
+            <label for="date-input">Date of entry</label>
+            <input type="date" name="date-input" id="edit-date-input" class="form-control" required>
+        </fieldset>
+        <br>
+    
+        <fieldset>
+            <label for="concept-input">Concepts covered</label>
+            <input type="text" name="concept-input" id="edit-concept-input" class="form-control" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="entry-input">Journal entry</label>
+            <textarea name="entry-input" id="edit-entry-input" class="form-control" required></textarea>
+        </fieldset>
+        <br>
+    
+        <form>
+        <fieldset class="dropdown form-group">
+            <label for="edit-mood-input">Mood</label>
+            <select class="edir-mood" name="edit-mood-input" id="edit-mood-input" class="form-control dropdown-menu required" required>
+                <option value="Amazing" class="dropdown-item">Amazing</option>
+                <option value="Great" class="dropdown-item">Great</option>
+                <option value="Ok" class="dropdown-item">Ok</option>
+                <option value="Can be better" class="dropdown-item">Can be better</option>
+            </select> <br><br>
+            <br>
+            <button id="record" class="btn btn-warning btn-lg">Save Journal Entry</button>
+            <br><br>
+        </fieldset>
+    </form>
+    <hr>
+    `
   }
 }
 

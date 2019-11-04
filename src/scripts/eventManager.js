@@ -57,12 +57,12 @@ const eventManager = {
       if (event.target.id.startsWith("edit-button")) {
         const entryToEdit = event.target.id.split("--")[1]
         console.log(`Please edit entry number!  ${entryToEdit}`)
-
+        // rendering a the dom with the EDIT form
         let mainFormContainer = document.getElementById("main-form-container")
         let entryLogContainer = document.querySelector(".entryLog")
-        mainFormContainer.innerHTML = formManager.renderEditForm() // <----- replacing the MAIN form with EDIT 
+        mainFormContainer.innerHTML = formManager.renderEditForm() 
         entryLogContainer.innerHTML = ""
-
+        // fetch calling the asked journal entry
         API.getJournalEntry(entryToEdit)
           .then(jsonfiedResponse => {
             let conceptForEdit = jsonfiedResponse.concept
@@ -71,27 +71,29 @@ const eventManager = {
             let dateForEdit = jsonfiedResponse.date
 
             console.log(dateForEdit, conceptForEdit, entryForEdit, moodForEdit)
-
+        // populating the edit form
             document.getElementById("edit-date-input").value = dateForEdit
             document.getElementById("edit-concept-input").value = conceptForEdit
             document.getElementById("edit-entry-input").value = entryForEdit
             document.getElementById("edit-mood-input").value = moodForEdit
-
+        // setting the event handler to look for a click
             document.getElementById("edit-buttons").addEventListener("click", function (e) {
               console.log(e.target.id)
               if (event.target.id.startsWith("edit-button")) {
                 const UpdateOrCancel = event.target.id.split("--")[1]
                 if (UpdateOrCancel === "save") {
                   console.log("SAVED!")
-
+                // grabbing the new edited data
                   let editedDate = document.getElementById("edit-date-input").value
                   let editedConcept = document.getElementById("edit-concept-input").value
                   let editedEntry = document.getElementById("edit-entry-input").value
                   let editedMood = document.getElementById("edit-mood-input").value
-
+                // creating a new object from the edited data
                   const updatedEntry = entryManager.entriesFactory(editedDate, editedConcept, editedEntry, editedMood)
                   console.log(updatedEntry)
+                // Fetch PULL with the updated data
                   API.updateJournalEntry(updatedEntry, entryToEdit)
+                // User hit a Cancel button
                 } else if (UpdateOrCancel === "cancel") {
                   console.log("NEVERMIND!")
                 }

@@ -29,6 +29,20 @@ getJournalEntry (entryId) {
     body: JSON.stringify(newJournalEntry)
         })
 },
+
+//*********************************************************************************************** 
+//  Update ONE entry
+//*********************************************************************************************** 
+updateJournalEntry (editedJournalEntry, entryId) {
+    console.log(editedJournalEntry, entryId)
+    fetch(`http://localhost:3000/entries/${entryId}`, { 
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedJournalEntry)
+        })
+},
 //*********************************************************************************************** 
 //  Delete an entry
 //*********************************************************************************************** 

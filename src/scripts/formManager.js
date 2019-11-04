@@ -108,7 +108,11 @@ const formManager = {
                 <option value="Can be better" class="dropdown-item">Can be better</option>
             </select> <br><br>
             <br>
-            <button id="record" class="btn btn-warning btn-lg">Save Journal Entry</button>
+            <fieldset id="edit-buttons"> 
+            <button id="edit-button--save" class="btn btn-warning btn-lg">Save Journal Entry</button>
+            <button id="edit-button--cancel" class="btn btn-light btn-lg">Cancel</button>
+            </fieldset>
+           
             <br><br>
         </fieldset>
     </form>

@@ -37,7 +37,7 @@ const eventManager = {
   //  Event listener to the DELETE button
   //*********************************************************************************************** 
   deleteAnEntry() {
-    document.querySelector(".entryLog").addEventListener("click", function (e) {
+    document.querySelector(".entryLog").addEventListener("click", function (e) { // listen for a click <--
       console.log(e.target.id)
       if (event.target.id.startsWith("delete-button")) {
         const entryToDelete = event.target.id.split("--")[1]
@@ -52,7 +52,7 @@ const eventManager = {
   //  Event listener to the EDIT button
   //*********************************************************************************************** 
   editAnEntry() {
-    document.querySelector(".entryLog").addEventListener("click", function (e) {
+    document.querySelector(".entryLog").addEventListener("click", function (e) { // listen for a click <--
       console.log(e.target.id)
       if (event.target.id.startsWith("edit-button")) {
         const entryToEdit = event.target.id.split("--")[1]
@@ -77,7 +77,7 @@ const eventManager = {
             document.getElementById("edit-entry-input").value = entryForEdit
             document.getElementById("edit-mood-input").value = moodForEdit
         // setting the event handler to look for a click
-            document.getElementById("edit-buttons").addEventListener("click", function (e) {
+            document.getElementById("edit-buttons").addEventListener("click", function (e) { // click
               console.log(e.target.id)
               if (event.target.id.startsWith("edit-button")) {
                 const UpdateOrCancel = event.target.id.split("--")[1]
@@ -109,14 +109,14 @@ const eventManager = {
   //*********************************************************************************************** 
 
   filterResponses() {
-    document.getElementById("all").addEventListener("click", function () {
+    document.getElementById("all").addEventListener("click", function () { // listen for a click <--
       API.getJournalEntries()
         .then(jsonfiedResponse => {
           renderDom.renderJournalEntries(jsonfiedResponse)
         })
     })
 
-    document.getElementById("amazing").addEventListener("click", function () {
+    document.getElementById("amazing").addEventListener("click", function () { // listen for a click <--
       API.getJournalEntries()
         .then(jsonfiedResponse => {
           filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Amazing")
@@ -125,7 +125,7 @@ const eventManager = {
         })
     })
 
-    document.getElementById("great").addEventListener("click", function () {
+    document.getElementById("great").addEventListener("click", function () { // listen for a click <--
       API.getJournalEntries()
         .then(jsonfiedResponse => {
           filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Great")
@@ -134,7 +134,7 @@ const eventManager = {
         })
     })
 
-    document.getElementById("ok").addEventListener("click", function () {
+    document.getElementById("ok").addEventListener("click", function () { // listen for a click <--
       API.getJournalEntries()
         .then(jsonfiedResponse => {
           filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Ok")
@@ -143,7 +143,7 @@ const eventManager = {
         })
     })
 
-    document.getElementById("can-be-better").addEventListener("click", function () {
+    document.getElementById("can-be-better").addEventListener("click", function () { // click <--
       API.getJournalEntries()
         .then(jsonfiedResponse => {
           filteredMoodArray = jsonfiedResponse.filter(mood => mood.mood === "Can be better")

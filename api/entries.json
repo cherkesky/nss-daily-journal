@@ -11,22 +11,22 @@
       "date": "2019-10-30",
       "concept": "Fetch calls",
       "entry": "How to get data from an API",
-      "mood": "Great",
+      "mood": "Amazing",
       "id": 2
     },
     {
-      "id": 3,
       "date": "2019-10-30",
       "concept": "CSS Selectors",
       "entry": "How to use classes and ids to apply CSS to elements on the DOM",
-      "mood": "Ok"
+      "mood": "Ok",
+      "id": 3
     },
     {
-      "id": 4,
       "date": "2019-10-30",
       "concept": "CSS Selectors 2",
       "entry": "How to use classes and ids to apply CSS to elements on the DOM",
-      "mood": "Ok"
+      "mood": "Ok",
+      "id": 4
     },
     {
       "date": "2019-10-30",
@@ -71,17 +71,17 @@
       "id": 10
     },
     {
-      "date": "2019-10-30",
-      "concept": "POST fetch 2",
-      "entry": "Learning about the POST concept with Steve Brownly",
+      "date": "2019-11-04",
+      "concept": "Webpack",
+      "entry": "so interesting",
       "mood": "Can be better",
       "id": 11
     },
     {
       "date": "2019-11-04",
-      "concept": "Guy",
+      "concept": "Caty",
       "entry": "Cherkesky",
-      "mood": "Great",
+      "mood": "Amazing",
       "id": 12
     }
   ]
